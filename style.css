@@ -3,7 +3,7 @@
 *:after {
   box-sizing: border-box;
 }
-* {
+html {
   font-family: "Poppins", sans-serif;
 }
 body {
@@ -11,8 +11,8 @@ body {
 }
 h1 {
   font-family: "Poppins";
-  font-style: normal;
-  font-weight: 900;
+  font-style: italic;
+  font-size: 3rem;
 }
 h2 {
   font-family: "Poppins";
@@ -28,9 +28,11 @@ h3 {
 
 .header {
   padding: 2.5rem 1rem;
+  padding-top: 4.5rem;
   text-align: center;
   background-color: lightblue;
   color: white;
+  position: relative;
 }
 .sub-title::after {
   margin-left: 4px;
@@ -48,6 +50,7 @@ h3 {
 .main > * {
   border-top: 4px solid lightblue;
   border-radius: 5%;
+  padding: 0 1rem;
 }
 
 .main > *:first-child {
@@ -68,4 +71,25 @@ h3 {
 .nav-link:active {
   color: white;
   background-color: grey;
+}
+
+.experience-heading {
+  display: inline-block;
+}
+.experience-subheading {
+  display: inline-block;
+}
+
+.article-heading {
+  position: relative;
+  left: -16px;
+}
+.hire-me {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: snow;
+  color: black;
 }
