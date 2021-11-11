@@ -9,10 +9,14 @@ html {
 body {
   margin: 0;
 }
+h1,
+h2,
+h3 {
+  font-size: 1rem;
+}
 h1 {
   font-family: "Poppins";
   font-style: italic;
-  font-size: 3rem;
 }
 h2 {
   font-family: "Poppins";
@@ -27,20 +31,29 @@ h3 {
 }
 
 .header {
-  padding: 2.5rem 1rem;
-  padding-top: 4.5rem;
+  padding: 2rem 1rem;
+  padding-top: 4rem;
   text-align: center;
   background-color: lightblue;
   color: white;
   position: relative;
 }
-.sub-title::after {
+.heading-group {
+  font-size: 2rem;
+}
+.main-heading {
+  font-size: 1em;
+}
+.profession {
+  font-size: 0.5em;
+}
+.profession::after {
   margin-left: 4px;
   content: "🎯";
 }
 .main {
-  padding: 1rem;
-  max-width: 800px;
+  padding: 0.5rem;
+  max-width: 60ch;
   margin: 0 auto;
 }
 .main > * + * {
@@ -48,7 +61,7 @@ h3 {
 }
 
 .main > * {
-  border-top: 4px solid lightblue;
+  border-top: 0.25rem solid lightblue;
   border-radius: 5%;
   padding: 0 1rem;
 }
@@ -57,12 +70,16 @@ h3 {
   margin-top: 0;
   padding-top: 0;
 }
+.nav {
+  display: flex;
+  flex-direction: column;
+}
 
 .nav-link {
-  padding: 4px 8px;
+  padding: 0.25rem 0.25rem;
   color: white;
   text-decoration: none;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 .nav-link:hover {
   color: black;
@@ -74,22 +91,66 @@ h3 {
 }
 
 .experience-heading {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 .experience-subheading {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 
 .article-heading {
   position: relative;
-  left: -16px;
+  left: -1rem;
+}
+.skills-heading {
+  display: flex;
+  justify-content: center;
 }
 .hire-me {
   position: absolute;
   top: 1rem;
   right: 1rem;
   padding: 0.5rem;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background-color: snow;
   color: black;
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 1.2rem;
+  }
+  .main > * + * {
+    margin-top: 3.5rem;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .heading-section {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 860px) {
+  html {
+    font-size: 1.4rem;
+  }
+  .hire-me {
+    position: fixed;
+    background-color: lightgray;
+  }
+  .heading-section {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media print {
+  .hire-me {
+    display: none;
+  }
+  .nav {
+    display: none;
+  }
 }
