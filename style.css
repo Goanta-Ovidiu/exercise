@@ -34,7 +34,7 @@ h3 {
   padding: 2rem 1rem;
   padding-top: 4rem;
   text-align: center;
-  background-color: lightblue;
+  background-image: linear-gradient(lightblue, aqua);
   color: white;
   position: relative;
 }
@@ -113,8 +113,28 @@ h3 {
   right: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  background-color: snow;
-  color: black;
+  border: 1px solid white;
+  box-shadow: 3px 3px aqua;
+  background-color: lightblue;
+  color: rgba(75, 69, 69, 0.5);
+}
+
+.footer {
+  background-image: linear-gradient(lightblue, aqua);
+  height: 20vh;
+  padding-top: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  color: white;
+}
+.mail-link {
+  text-decoration: none;
+  color: white;
+}
+.mail-link:hover {
+  font-weight: bold;
+  font-size: 1rem;
+  color: salmon;
 }
 @media screen and (min-width: 640px) {
   html {
@@ -139,7 +159,7 @@ h3 {
   }
   .hire-me {
     position: fixed;
-    background-color: lightgray;
+    background-color: lightblue;
   }
   .heading-section {
     display: flex;
