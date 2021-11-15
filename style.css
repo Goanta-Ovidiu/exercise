@@ -5,6 +5,9 @@
 }
 html {
   font-family: "Poppins", sans-serif;
+  --text-color: white;
+  --linear-color: linear-gradient(lightblue, aqua);
+  --bg-color: lightblue;
 }
 body {
   margin: 0;
@@ -34,8 +37,8 @@ h3 {
   padding: 2rem 1rem;
   padding-top: 4rem;
   text-align: center;
-  background-image: linear-gradient(lightblue, aqua);
-  color: white;
+  background-image: var(--linear-color);
+  color: var(--text-color);
   position: relative;
 }
 .heading-group {
@@ -61,15 +64,11 @@ h3 {
 }
 
 .main > * {
-  border-top: 0.25rem solid lightblue;
+  border-top: 0.25rem solid var(--bg-color);
   border-radius: 5%;
   padding: 0 1rem;
 }
 
-.main > *:first-child {
-  margin-top: 0;
-  padding-top: 0;
-}
 .nav {
   display: flex;
   flex-direction: column;
@@ -77,17 +76,23 @@ h3 {
 
 .nav-link {
   padding: 0.25rem 0.25rem;
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   margin-left: 1rem;
+  transition: background-color 1s;
+  transition-timing-function: ease-in-out;
+}
+.nav-link:focus {
+  color: olive;
+  background-color: salmon;
 }
 .nav-link:hover {
-  color: black;
-  background-color: lightgrey;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 .nav-link:active {
-  color: white;
-  background-color: grey;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 .experience-heading {
@@ -113,23 +118,29 @@ h3 {
   right: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  border: 1px solid white;
+  border: 1px solid var(--text-color);
   box-shadow: 3px 3px aqua;
-  background-color: lightblue;
+  background-color: var(--bg-color);
   color: rgba(75, 69, 69, 0.5);
+  transform-origin: right;
+  transition: transform 0.5s;
 }
-
+.header:hover .hire-me {
+  transform: scale(2) translate(-200%);
+}
 .footer {
-  background-image: linear-gradient(lightblue, aqua);
+  background-image: var(--linear-color);
   height: 20vh;
   padding-top: 1rem;
   line-height: 1.5;
   text-align: center;
-  color: white;
+  color: var(--text-color);
 }
 .mail-link {
   text-decoration: none;
-  color: white;
+  transition: font-weight 0.5s;
+  transition-timing-function: linear;
+  color: var(--text-color);
 }
 .mail-link:hover {
   font-weight: bold;
@@ -159,7 +170,7 @@ h3 {
   }
   .hire-me {
     position: fixed;
-    background-color: lightblue;
+    background-color: var(--bg-color);
   }
   .heading-section {
     display: flex;
