@@ -97,11 +97,11 @@ h3 {
 
 .experience-heading {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .experience-subheading {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .article-heading {
@@ -110,7 +110,7 @@ h3 {
 }
 .skills-heading {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .hire-me {
   position: absolute;
@@ -126,7 +126,7 @@ h3 {
   transition: transform 0.5s;
 }
 .header:hover .hire-me {
-  transform: scale(2) translate(-200%);
+  transform: scale(2) translate(-20vw);
 }
 .footer {
   background-image: var(--linear-color);
@@ -173,8 +173,11 @@ h3 {
     background-color: var(--bg-color);
   }
   .heading-section {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+  }
+  .article-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
   }
 }
 @media print {
